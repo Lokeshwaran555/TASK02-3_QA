@@ -1,0 +1,15 @@
+it('Work Order', function(){
+
+    cy.visit('https://dev.devmobo.com/login')
+    cy.get('#email').type('lokzz05000@gmail.com')
+    cy.get('#password').type('Lokesh@52510')
+    cy.get('#loginButton').click()
+    cy.get(':nth-child(8) > .nav-link').click()
+    cy.get(':nth-child(1) > .rt-tr > :nth-child(8) > .pendingStyle > .editProfile > .editLink').click()
+    cy.get('[style="text-align: right; width: 50%; float: right;"] > .btn').click()
+    cy.get('#workOrderStatus').click()
+    cy.get(':nth-child(2) > .dropdown > .dropdown-menu > :nth-child(2)').click()
+    cy.get('[style="text-align: right;"] > .btn-primary').click()
+    
+
+})    
